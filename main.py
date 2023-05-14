@@ -20,5 +20,6 @@ def get_chatgpt_response(message: str) -> ResponseData:
 
 
 if __name__ == "__main__":
-    response = get_chatgpt_response(message="Me conta uma piada")
-    print(response.choices[0].message.content)
+    response = get_chatgpt_response(message="Tell me a joke")
+    for choices in response.choices:
+        print(choices.message.content)
