@@ -13,6 +13,6 @@ def get_whisper_response(path: str) -> Dict:
 
 if __name__ == "__main__":
     response = get_whisper_response(
-        path="XXXXXXX"
+        path=f"./{config('TEST_FILE_AUDIO_PATH')}"
     )
     print(response["text"])
